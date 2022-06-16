@@ -39,7 +39,7 @@ export default {
 			})
 		},
 		next() {
-			this.numbers[0] =this.num;
+			this.numbers[0] = this.num;
 			this.num = null;
 			this.placeholder = "Now the second number"
 		},
