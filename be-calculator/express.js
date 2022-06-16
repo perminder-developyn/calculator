@@ -9,7 +9,7 @@ app.get('/:operator/:num1/:num2', (req, res) => {
     let num2 = parseInt(req.params.num2);
     let calc = {
         'add': num1 + num2,
-        'takeaway': num1 - num2,
+        'minus': num1 - num2,
         'times': num1 * num2,
         'over': num1 / num2
     };
