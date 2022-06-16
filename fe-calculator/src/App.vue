@@ -41,7 +41,7 @@ export default {
 		next() {
 			this.numbers[0] = this.num;
 			this.num = null;
-			this.placeholder = "Now the second number"
+			this.placeholder = "Now the second number";
 		},
 		clear() {
 			this.history = [];
