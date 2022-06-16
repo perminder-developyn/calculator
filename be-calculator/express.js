@@ -5,8 +5,10 @@ const port = 3000;
 
 app.use(cors());
 app.get('/:operator/:num1/:num2', (req, res) => {
-    let num1 = parseInt(req.params.num1);
-    let num2 = parseInt(req.params.num2);
+    console.log(req.params.num1)
+    let num1 = Number(req.params.num1);
+    let num2 = Number(req.params.num2);
+
     let calc = {
         'add': num1 + num2,
         'minus': num1 - num2,
