@@ -4,15 +4,10 @@
 	<button class="calculator" v-on:click="operator='minus', next()">-</button>
 	<button class="calculator" v-on:click="operator='times', next()">x</button>
 	<button class="calculator" v-on:click="operator='over', next()">/</button>
-	<button @click="updateUrl()">=</button>
-	<h3 v-if="history.length > 0">{{answer}}</h3>
-	<div>
-		<button 
-			v-if="history.length > 0" 
-			@click="clear()"
-		> 
-			Clear History 
-		</button>
+	<button v-on:click="updateUrl()">=</button>
+	<div v-if="history.length > 0">
+		<h3>{{answer}}</h3>
+		<button @click="clear()">Clear History</button>
 	</div>
 	<div class="history" v-for="(list, i) in history" :key="i" >
 		({{i+1}}) {{history[i][0]}} {{history[i][1]}} {{history[i][2]}} 
@@ -55,7 +50,7 @@ export default {
 	data() {
 		return {
 			operator: null,
-			answer: 0,
+			answer: null,
 			numbers: [null, null],
 			num : null,
 			history: [],
