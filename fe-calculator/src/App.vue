@@ -9,7 +9,7 @@
 		<h3>{{answer}}</h3>
 		<button @click="clear()">Clear History</button>
 	</div>
-	<div class="history" v-for="(list, i) in history" :key="i" >
+	<div class="history" v-for="(list, i) in history" :key="i">
 		({{i+1}}) {{history[i][0]}} {{history[i][1]}} {{history[i][2]}} 
 		is equal to {{history[i][3]}}
 	</div>
